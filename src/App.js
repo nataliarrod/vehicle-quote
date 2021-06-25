@@ -31,7 +31,7 @@ function App() {
 
   return (
     <Container>
-      <Header title="Vehicle's Quote" />
+      <Header title="Find your motorcycle here" />
       <FormContainer>
         <Form setResume={setResume} setLoading={setLoading} />
         {loading ? <Spinner /> : null}

@@ -2,10 +2,10 @@ import React from 'react';
 import styled from '@emotion/styled';
 
 const HeaderContainer = styled.header`
-  background-color: #26C6DA;
-  padding: 10px;
+  background-color: #1D8BFA;
+  padding: 20px;
   font-weight: bold;
-  color: #FFFFFF;
+  color: white;
 `;
 
 const HeaderText = styled.h1`

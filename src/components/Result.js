@@ -3,31 +3,30 @@ import styled from "@emotion/styled";
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 
 const Message = styled.p`
-  background-color: rgb(127, 224, 237);
-  margin-top: 2rem;
+  background-color: #939AA2;
+  margin-top: 1rem;
   padding: 1 rem;
   text-align: center;
+  color: white;
 `;
 
 const QuoteText = styled.p`
-  color: #00838f;
-  padding: 1rem;
+  color: black;
   text-transform: uppercase;
   font-weight: bold;
   margin: 0;
 `;
 const ResultQuote = styled.div`
   text-align: center;
-  padding: 0.5rem;
-  border: 1px solid #26c6da;
-  background-color: rgb (127, 224, 237);
+  border: 1px solid #1D8BFA;
   margin-top: 1rem;
   position: relative;
+  border-radius: 15px;
 `;
 
 const Result = ({ quote }) => {
   return quote === 0 ? (
-    <Message> Choose brand, year or type of plan</Message>
+    <Message> Choose brand, year or type of insurance</Message>
   ) : (
     <ResultQuote>
       <TransitionGroup
@@ -39,7 +38,7 @@ const Result = ({ quote }) => {
           key={quote}
           timeout={{ enter: 500, exit: 500}}
         >
-          <QuoteText>Your quote total is: $ {quote}</QuoteText>
+          <QuoteText>Total: $ {quote}</QuoteText>
         </CSSTransition>
       </TransitionGroup>
     </ResultQuote>

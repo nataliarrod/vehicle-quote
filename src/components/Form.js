@@ -26,7 +26,7 @@ const InputRadio = styled.input`
   margin: 0 1rem;
 `;
 const Button = styled.button`
-  background-color: #00838f;
+  background-color: #131960;
   font-size: 12px;
   width: 100%;
   padding: 1rem;
@@ -36,6 +36,7 @@ const Button = styled.button`
   border: none;
   transition: background-color 0.3s ease;
   margin-top: 2rem;
+  border-radius: 15px;
 
   &:hover {
     background-color: #26c6da;
@@ -101,14 +102,15 @@ const Form = ({ setResume, setLoading }) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      {error ? <Error>Todos los campos son obligatorios</Error> : null}
+      {error ? <Error>All fields are required</Error> : null}
       <Field>
         <Label>Brand</Label>
         <Select name="brand" value={brand} onChange={getInformation}>
           <option value="">-- Choose --</option>
-          <option value="american">American</option>
-          <option value="european">European</option>
-          <option value="chinese">Chinese</option>
+          <option value="BMW">BMW</option>
+          <option value="Ducati">Ducati</option>
+          <option value="Harley">Harley-Davidson</option>
+          <option value="Kawasaki">Kawasaki</option>
         </Select>
       </Field>
 
@@ -130,7 +132,7 @@ const Form = ({ setResume, setLoading }) => {
       </Field>
 
       <Field>
-        <Label>Plan</Label>
+        <Label>Insurance</Label>
         <InputRadio
           type="radio"
           name="plan"

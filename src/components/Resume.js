@@ -8,6 +8,7 @@ const ContainerSummary = styled.div`
   background-color: #00838F;
   color: #FFF;
   margin-top: 1rem;
+  border-radius: 15px;
 `;
 
 const Resume = ({ data }) => {
@@ -17,11 +18,11 @@ const Resume = ({ data }) => {
   return (
     <ContainerSummary>
       <h2>Quote Summary</h2>
-      <ul>
-        <li>Brand:{ firstLetterMayus(brand) }</li>
-        <li>Year:{ firstLetterMayus(year) }</li>
-        <li>Plan:{ firstLetterMayus(plan) }</li>
-      </ul>
+      <ol>
+        <li>Brand: { firstLetterMayus(brand) }</li>
+        <li>Year: { firstLetterMayus(year) }</li>
+        <li>Insurance: { firstLetterMayus(plan) }</li>
+      </ol>
     </ContainerSummary>
   );
 };
